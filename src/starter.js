@@ -9,7 +9,7 @@ function getWeatherIcon(wmoCode) {
     [[53, 55, 63, 65, 57, 67, 81, 82], "🌧"],
     [[71, 73, 75, 77, 85, 86], "🌨"],
     [[95], "🌩"],
-    [[96, 99], "⛈"],
+    [[96, 99], "⛈"]
   ]);
   const arr = [...icons.keys()].find((key) => key.includes(wmoCode));
   if (!arr) return "NOT FOUND";
@@ -26,7 +26,7 @@ function convertToFlag(countryCode) {
 
 function formatDay(dateStr) {
   return new Intl.DateTimeFormat("en", {
-    weekday: "short",
+    weekday: "short"
   }).format(new Date(dateStr));
 }
 
